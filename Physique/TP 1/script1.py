@@ -22,17 +22,17 @@ print(f"L'écart-type est de {ecarttype:.{n-1}e}.")
 print(f"L'incertitude-type est de {incertitudetype:.{n-1}e}.")
 
 # Plot
-plt.hist(valeurs)
+plt.hist(valeurs) # Histogramme
 plt.xlabel("Valeur mesurée")
 plt.ylabel("Nombre de mesures")
 plt.title("Distribution des mesures")
-plt.axvline(moyenne, color="red", label="Moyenne")
+plt.axvline(moyenne, color="red", label="Moyenne") # Ligne verticale de la moyenne
 plt.text(
-    0.05, 0.95,
+    0.05, 0.95, # Position dans le cadre (entre 0 et 1)
     f"Moyenne = {moyenne:.{n-1}e}\n"
     f"Écart-type = {ecarttype:.{n-1}e}\n"
     f"Incertitude-type = {incertitudetype:.{n-1}e}",
-    transform=plt.gca().transAxes,
+    transform=plt.gca().transAxes, # Transformer les coordonnées en coordonnées entre 0 et 1
     verticalalignment="top"
 )
 plt.show()
