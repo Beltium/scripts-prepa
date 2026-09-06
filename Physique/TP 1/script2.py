@@ -3,10 +3,10 @@ import matplotlib.pyplot as plt
 
 # Paramètres
 l = 1
-u_l = 0.005
+u_l = 0.005 # Incertitude
 
 g = 9.81
-u_g = 0.01
+u_g = 0.01 # Incertitude
 
 n = 3 # Nombre chiffres significatifs
 N = 10000 # Nombre de simulations
@@ -28,7 +28,7 @@ print(f"Valeur moyenne : {moyenne:.{n-1}e}")
 print(f"Incertitude-type composée : {incertitudetype:.{n-1}e}")
 
 # Histogramme
-plt.hist(T, bins = 100)
+plt.hist(T, bins = 100) # Histogramme avec 100 intervalles
 plt.axvline(moyenne, color="red", label="Moyenne")
 plt.xlabel("Période T (s)")
 plt.ylabel("Nombre de simulations")
@@ -40,5 +40,5 @@ plt.text(
     transform=plt.gca().transAxes, # Transformer les coordonnées en coordonnées entre 0 et 1
     verticalalignment="top"
 )
-plt.legend()
-plt.show()
+plt.legend() # Afficher la légende
+plt.show() # Afficher le plot
