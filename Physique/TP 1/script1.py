@@ -35,8 +35,8 @@ plt.text(
     transform=plt.gca().transAxes, # Transformer les coordonnées en coordonnées entre 0 et 1
     verticalalignment="top"
 )
-plt.legend()
-plt.show()
+plt.legend() # Afficher la légende
+plt.show() # Afficher le plot
 
 
 
