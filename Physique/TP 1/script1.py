@@ -22,7 +22,7 @@ print(f"L'écart-type est de {ecarttype:.{n-1}e}.")
 print(f"L'incertitude-type est de {incertitudetype:.{n-1}e}.")
 
 # Plot
-plt.hist(valeurs) # Histogramme
+plt.hist(valeurs, bins=5) # Histogramme
 plt.xlabel("Valeur mesurée")
 plt.ylabel("Nombre de mesures")
 plt.title("Distribution des mesures")
