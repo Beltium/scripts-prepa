@@ -5,22 +5,22 @@ import matplotlib.pyplot as plt
 l = 1
 u_l = 0.005 # Incertitude
 
-g = 9.81
-u_g = 0.01 # Incertitude
+T = 2
+u_T = 0.1 # Incertitude
 
 n = 3 # Nombre chiffres significatifs
-N = 10000 # Nombre de simulations
+N = 1000 # Nombre de simulations
 
 # Calcul aléatoire des valeurs
 valeurs_l = np.random.uniform(l-u_l, l+u_l, N)
-valeurs_g = np.random.uniform(g-u_g, g+u_g, N)
+valeurs_T = np.random.uniform(T-u_T, T+u_T, N)
 
-# Calcul de la période
-T = 2 * np.pi * np.sqrt(valeurs_l/valeurs_g)
+# Calcul de g
+g = (4 * (np.pi)**2 * valeurs_l)/(valeurs_T**2)
 
 # Statistiques
-moyenne = np.mean(T)
-incertitudetype = np.std(T, ddof=1)
+moyenne = np.mean(g)
+incertitudetype = np.std(g, ddof=1)
 
 # Affichage
 print(f"Nombre de simulations : {N}")
@@ -28,9 +28,9 @@ print(f"Valeur moyenne : {moyenne:.{n-1}e}")
 print(f"Incertitude-type composée : {incertitudetype:.{n-1}e}")
 
 # Histogramme
-plt.hist(T, bins = 100) # Histogramme avec 100 intervalles
+plt.hist(g, bins = 100) # Histogramme avec 100 intervalles
 plt.axvline(moyenne, color="red", label="Moyenne")
-plt.xlabel("Période T (s)")
+plt.xlabel("Valeurs de g (m.s^-2)")
 plt.ylabel("Nombre de simulations")
 plt.title("Simulation aléatoire de la période du pendule")
 plt.text(
