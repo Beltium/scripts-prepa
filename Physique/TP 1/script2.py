@@ -2,13 +2,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Paramètres
-l = 1
-u_l = 0.005 # Incertitude
+l = 554e-3
+u_l = 0.7e-3 # Incertitude
 
-T = 2
-u_T = 0.1 # Incertitude
+T = 1.493
+u_T = 0.002 # Incertitude
 
-n = 3 # Nombre chiffres significatifs
+n = 5 # Nombre chiffres significatifs
 N = 1000 # Nombre de simulations
 
 # Calcul aléatoire des valeurs

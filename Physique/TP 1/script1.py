@@ -3,12 +3,9 @@ import matplotlib.pyplot as plt
 
 # Paramètres
 valeurs = np.array([
-    9.8, 10.2, 10.1, 9.9, 10.0,
-    10.3, 9.7, 10.1, 9.8, 10.2,
-    10.0, 9.9, 10.1, 10.2, 9.8,
-    10.0, 9.7, 10.3, 10.1, 9.9
+   14.97, 14.91, 15.00, 14.94, 14.93, 14.94, 14.91, 14.94, 14.88, 14.84
 ]) # Valeurs mesurées
-n = 3 # Nombre de chiffres significatifs dans les résultats
+n = 5 # Nombre de chiffres significatifs dans les résultats
 
 # Calcul statistique
 moyenne = np.mean(valeurs)
